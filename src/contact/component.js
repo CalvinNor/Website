@@ -1,13 +1,18 @@
 import React, {Component} from "react";
-import {Typography} from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import "./css/contact.css"
+import {SocialIcon} from 'react-social-icons';
 
 class Contact extends Component {
 
     render() {
         return (
-            <Typography>
-                Contact Us
-            </Typography>
+            <Card className="card">
+                <SocialIcon className="social-icon" url="https://twitter.com/calvinnrn"/>
+                <SocialIcon className="social-icon" url="https://www.linkedin.com/in/calvin-noronha/"/>
+                <SocialIcon className="social-icon" url="https://github.com/CalvinNor"/>
+                <SocialIcon className="social-icon" url="https://medium.com/@calvin.nrnha"/>
+            </Card>
         );
     }
 }
