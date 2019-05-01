@@ -42,6 +42,10 @@ class RootContainer extends Component {
         }
     };
 
+    componentDidMount() {
+        document.title = "Calvin Noronha - Android Developer"
+    }
+
     render() {
 
         return (
