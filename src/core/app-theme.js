@@ -7,6 +7,10 @@ const theme = createMuiTheme({
             main: "#4CAF50" // Material Green
         }
     },
+
+    typography: {
+        useNextVariants: true
+    }
 });
 
 export default theme

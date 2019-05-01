@@ -5,3 +5,8 @@
     max-width: 300px;
     margin: 30px;
 }
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}

@@ -4,11 +4,23 @@ import './css/about.css'
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
 import styles from '../core/styles'
+import theme from '../core/app-theme'
 
 const about_styles = {
 
+    helloWorld: {
+        margin: 5,
+        textAlign: "center"
+    },
+
     name: {
-        margin: 5
+        marginTop: 10,
+        textAlign: "center"
+    },
+
+    subtitle: {
+        textAlign: "center",
+        marginBottom: 12
     },
 
     heading: {
@@ -16,59 +28,84 @@ const about_styles = {
     },
 
     description: {
-        marginTop: 20,
+        marginTop: 12,
         marginLeft: 5,
         marginRight: 5,
-        marginBottom: 20
+        fontsize: 100
+    },
+
+    podcastList: {
+        margin: 5,
+        paddingLeft: 15,
+        listStyleType: "circle"
     }
 };
 
 class About extends Component {
 
     render() {
-        const bullet = <span style={styles.bullet}>•</span>;
-
         return (
             <Grid container justify={"center"} alignItems={"center"} direction={"column"} style={styles.page_content}>
+
                 <img src={image} class="profile-picture" alt="Calvin Noronha"/>
-                <Typography variant="display1" style={about_styles.name} color={"textPrimary"}>
-                    Calvin Noronha
+
+                <Typography variant="h5" style={about_styles.helloWorld}>
+                    Hello World! <span role="img" aria-label="hand-wave">👋</span>
                 </Typography>
-                <Typography variant="Title" style={about_styles.heading} color={"textSecondary"}>Android
-                    Developer {bullet}
-                    Software Engineer {bullet}
-                    Tech Enthusiast</Typography>
+
+                <Typography variant="h5" style={about_styles.name} color={"textPrimary"}>
+                    I'm <b><font color={theme.palette.primary.main}>Calvin Noronha</font></b>
+                </Typography>
+
+                <Typography variant="subtitle1" style={about_styles.subtitle}>
+                    Android Developer, Software Engineer & Tech Enthusiast. I write applications for Android.
+                </Typography>
+
                 <Typography variant="body1" style={about_styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nibh in nisl efficitur rhoncus
-                    in vel eros. Integer sed hendrerit risus. Maecenas faucibus felis ac egestas viverra. Interdum et
-                    malesuada fames ac ante ipsum primis in faucibus. Pellentesque ultricies laoreet nunc, sed luctus
-                    mauris feugiat id. Fusce a velit ornare, mattis sem dignissim, ornare lacus. Sed dictum sapien eget
-                    purus tempor euismod. Duis eu metus ut odio euismod commodo ac non nisi.
-
-                    Nullam pulvinar mauris pulvinar, mattis erat et, maximus massa. Maecenas lorem magna, vehicula eget
-                    posuere at, gravida sit amet velit. In eu erat sapien. Integer dictum leo quis sapien blandit
-                    iaculis. Aenean purus nisl, molestie at porta a, ornare ut leo. Maecenas sit amet purus consectetur,
-                    volutpat enim sit amet, dignissim magna. Phasellus vehicula, enim at viverra feugiat, nulla odio
-                    interdum felis, id consequat elit lacus eu est. Nam sapien nisi, ultrices a viverra scelerisque,
-                    sodales ac urna. Phasellus ac quam vel nisi scelerisque tincidunt at a eros.
-
-                    Quisque venenatis non urna id pretium. Class aptent taciti sociosqu ad litora torquent per conubia
-                    nostra, per inceptos himenaeos. Vestibulum vitae justo id libero pulvinar vestibulum vel vitae
-                    magna. Aenean id ipsum rutrum, hendrerit odio in, tempor neque. Etiam faucibus purus commodo
-                    ullamcorper vulputate. Nam at finibus justo. Integer rhoncus vestibulum sodales. Vivamus porttitor,
-                    sapien id bibendum imperdiet, ligula erat porta quam, sed pretium ipsum velit quis justo. Cras
-                    volutpat velit et ex volutpat, vitae mollis risus sagittis. Cras varius ultricies sagittis. Praesent
-                    in ante a felis vulputate faucibus non eget massa. Quisque interdum nisl malesuada purus ornare,
-                    tempor varius elit porta. Cras vestibulum nunc orci, a lobortis velit consectetur at. Morbi dictum
-                    consequat consectetur.
-
-                    Etiam ut felis eu mauris malesuada posuere fringilla in turpis. Mauris leo felis, lacinia non
-                    ullamcorper a, porttitor et felis. Etiam faucibus nisl semper urna consectetur hendrerit. Vivamus
-                    bibendum dolor porta, pharetra eros nec, tincidunt eros. Mauris non sapien mauris. Interdum et
-                    malesuada fames ac ante ipsum primis in faucibus. Proin gravida pretium ipsum, quis pretium sem.
-                    Pellentesque eu vulputate risus, vel ullamcorper nulla. Donec pulvinar quam vel lorem ullamcorper,
-                    nec fermentum purus molestie. Praesent ut dolor semper, auctor elit a, tincidunt sem.
+                    I'm presently an Android Developer at <a href="https://www.mpaani.com/">m.Paani</a>, where I build
+                    solutions via our Retailer & Customer apps to empower local retailers & the next billion users!
                 </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    My work experience includes some big & small projects with world-class Software Design & Principes.
+                    I've also written tons of applications from scratch, and see them through to release. I'm always
+                    up-to-date with the Android SDK and popular libraries / frameworks.
+                </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    In my free time, I work and experiment on hobby projects like MovieMan & DailyCodingProblem.<br/>
+                    Check out my <a href="https://github.com/CalvinNor">GitHub</a> for more on that.
+                </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    I like to keep up with Technology & Engineering, and also listen to a bunch of Tech Podcasts. To
+                    name a few:
+                    <ul style={about_styles.podcastList}>
+                        <li><a href="https://fragmentedpodcast.com/">Fragmented</a></li>
+                        <li><a href="https://www.techmeme.com/">Techmeme</a></li>
+                        <li><a href="https://darknetdiaries.com/">Darknet Diaries</a></li>
+                        <li><a href="https://www.redhat.com/en/command-line-heroes">Commandline Heroes</a></li>
+                    </ul>
+
+                </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    I've written some articles about Bug Fixing & Synchronisation, which got featured by professional
+                    curators!<br/>
+                    Check out my <a href="https://medium.com/@calvin.nrnha">Medium</a> for more on that.
+                </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    I'm also an active member of the <a
+                    href="https://madmeetup.com/">MAD</a> Meetup, <a
+                    href="https://discordapp.com/invite/zBSfhwk">Fragmented Discord</a> Server & <a
+                    href="https://mindorks.com/join-community">MindOrks Slack</a> Community.
+                </Typography>
+
+                <Typography variant="body1" style={about_styles.description}>
+                    Feel free to reach out to me anytime, anywhere! I'm responsive on all my Social Profiles.
+                </Typography>
+
             </Grid>
         );
     }
