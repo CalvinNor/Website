@@ -62,8 +62,9 @@ class About extends Component {
                 </Typography>
 
                 <Typography variant="body1" style={about_styles.description}>
-                    I'm presently an Android Developer at <a href="https://www.mpaani.com/">m.Paani</a>, where I build
-                    solutions via our Retailer & Customer apps to empower local retailers & the next billion users!
+                    I'm presently a Lead Android Engineer at <a href="https://www.cityflo.com//">Cityflo</a>, where I
+                    actively improve and maintain our Customer Booking & Driver apps.<br/>
+                    We're building the next generation of commute from Home to Work, one ride at a time.
                 </Typography>
 
                 <Typography variant="body1" style={about_styles.description}>
