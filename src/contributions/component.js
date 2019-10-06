@@ -21,10 +21,17 @@ class Contributions extends Component {
                 </Typography>
 
                 {Contributions.buildPost(
+                    "Hey Android, Please Keep My Activities!",
+                    "https://miro.medium.com/max/984/1*3z9MOboAeBtiJjkNBYMQPQ.jpeg",
+                    "03 October, 2019",
+                    "https://medium.com/mindorks/hey-android-please-keep-my-activities-7bf96ccc0a38?source=friends_link&sk=e4510330b4ff9e623dfc57cbafeb570a"
+                )}
+
+                {Contributions.buildPost(
                     "Synchronisation 101 with Java",
                     "https://cdn-images-1.medium.com/max/1287/1*G_D3IlX92dgbRxAxRvMnfA.png",
                     "20 April, 2019",
-                    "https://medium.com/mindorks/synchronisation-101-with-java-bb11a7d651da"
+                    "https://medium.com/mindorks/synchronisation-101-with-java-bb11a7d651da?source=friends_link&sk=a709b3ef4ac1ff7708f4fadf68be3cc7"
                 )}
 
                 {Contributions.buildPost(
