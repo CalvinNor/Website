@@ -1,9 +1,11 @@
 import React, {Component} from "react";
 import CenteredTabs from "../tabs/centered-tabs";
 import {TAB_ABOUT, TAB_CONTACT, TAB_CONTRIBUTIONS, TAB_NAMES} from "../tabs/tab-constants";
+import {NAME_ABOUT, NAME_CONTACT, NAME_CONTRIBUTIONS} from "../analytics/analytics-constants";
 import About from "../about/component";
 import Contributions from "../contributions/component";
 import Contact from "../contact/component";
+import ReactGA from 'react-ga';
 import Grid from "@material-ui/core/Grid";
 
 class RootContainer extends Component {
@@ -27,6 +29,7 @@ class RootContainer extends Component {
     };
 
     getTabComponent = (position) => {
+        this.trackPageView(position);
         switch (position) {
             case TAB_ABOUT:
                 return <About/>;
@@ -36,6 +39,25 @@ class RootContainer extends Component {
 
             case TAB_CONTACT:
                 return <Contact/>;
+
+            default:
+                throw new Error("Invalid Tab Position: " + position)
+        }
+    };
+
+    trackPageView = (position) => {
+        switch (position) {
+            case TAB_ABOUT:
+                ReactGA.pageview(NAME_ABOUT);
+                break;
+
+            case TAB_CONTRIBUTIONS:
+                ReactGA.pageview(NAME_CONTRIBUTIONS);
+                break;
+
+            case TAB_CONTACT:
+                ReactGA.pageview(NAME_CONTACT);
+                break;
 
             default:
                 throw new Error("Invalid Tab Position: " + position)
