@@ -68,7 +68,7 @@ class About extends Component {
                 </Typography>
 
                 <Typography variant="body1" style={about_styles.description}>
-                    My work experience includes some big & small projects with world-class Software Design & Principes.
+                    My work experience includes some big & small projects with world-class Software Design & Principles.
                     I've also written tons of applications from scratch, and see them through to release. I'm always
                     up-to-date with the Android SDK and popular libraries / frameworks.
                 </Typography>
