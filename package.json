@@ -11,14 +11,14 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-ga": "^2.7.0",
-    "react-page-scroller": "^1.5.1",
     "react-scripts": "^2.1.8",
-    "react-social-icons": "^4.1.0",
-    "react-swipeable-views": "^0.13.3",
     "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "file-loader": "^6.0.0",
+    "gh-pages": "^2.1.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.6"
   },
   "scripts": {
     "start": "react-scripts start",

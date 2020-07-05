@@ -1,18 +1,21 @@
 import React, {Component} from "react";
-import Card from "@material-ui/core/Card";
 import "./css/contact.css"
-import {SocialIcon} from 'react-social-icons';
+import { SocialCard } from './socialcard';
+import LinkedinLogo from "./resources/linkedin.svg";
+import TwitterLogo from "./resources/twitter.svg";
+import GithubLogo from "./resources/github.svg";
+import MediumLogo from "./resources/medium.svg";
 
 class Contact extends Component {
 
     render() {
         return (
-            <Card className="card">
-                <SocialIcon className="social-icon" url="https://twitter.com/calvinnrnha"/>
-                <SocialIcon className="social-icon" url="https://www.linkedin.com/in/calvin-noronha/"/>
-                <SocialIcon className="social-icon" url="https://github.com/CalvinNor"/>
-                <SocialIcon className="social-icon" url="https://medium.com/@calvin.nrnha"/>
-            </Card>
+            <div className="ContactContainer">
+                <SocialCard image={TwitterLogo} title="@CalvinNrnha" link="https://twitter.com/calvinnrnha/" />
+                <SocialCard image={LinkedinLogo} title="Calvin Noronha" link="https://www.linkedin.com/in/calvin-noronha/" />
+                <SocialCard image={GithubLogo} title="CalvinNor" link="https://github.com/CalvinNor/" />
+                <SocialCard image={MediumLogo} title="@calvin.nrnha" link="https://medium.com/@calvin.nrnha/" />
+            </div>
         );
     }
 }
