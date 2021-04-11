@@ -10,3 +10,8 @@ a {
     color: #4CAF50;
     text-decoration: none;
 }
+
+p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
